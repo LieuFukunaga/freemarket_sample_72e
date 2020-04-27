@@ -43,6 +43,7 @@ class ProductsController < ApplicationController
     @product = Product.new(set_params)
     if @product.valid? && !@product.images.empty?
       @product.save
+      redirect_to root_path
     else
       redirect_to new_product_path
     end

@@ -31,6 +31,12 @@ class ProductsController < ApplicationController
       @category_parent_array << [gen1.name, gen1.id]
     end
 
+    # 商品の状態
+    @condition_array = ["---"]
+    Condition.all.each do |condition|
+      @condition_array << [condition.name, condition.id]
+    end
+
     @brands = Bland.all
     @brand_array = [nil]
     @brands.each do |brand|

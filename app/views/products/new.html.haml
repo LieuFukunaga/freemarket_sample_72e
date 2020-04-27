@@ -59,7 +59,7 @@
           商品の状態
           %span.item-detail__status__tag
             必須
-        = form.select :condition_id, [["選択してください",""],["新品、未使用", 1], ["未使用に近い", 2], ["目立った傷や汚れなし", 3],["やや傷や汚れあり", 4], ["傷や汚れあり", 5],["全体的に状態が悪い", 6],],{},{class: "item-detail__form"} 
+        = form.select(:condition_id, @condition_array, {}, {class: 'select_box', id: 'condition-selector'})
       .item-cost
         .item-cost__about
           配送について
@@ -92,10 +92,6 @@
           販売手数料(10%)
           %span.item-price__commission__value
         .item-price__profit
-          販売利益
-          %span.item-price__profit__value 円
-          %input{name: "tax", size: "10", type: "hidden", value: "10"}
-          %output.item-price__profit__value__price{name: "incl"} 0
       .item-exhibition
         = form.submit "出品する" ,class: "item-exhibition__btn"
         .item-exhibition__back

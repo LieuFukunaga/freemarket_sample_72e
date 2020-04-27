@@ -489,11 +489,15 @@ conditions = Condition.create!([
   {name: "全体的に状態が悪い"},
 ])
 
-10.times do |i|
-  Bland.create!(
-    name: "Brand #{i+1}"
-  )
-end
+brands = Bland.create!([
+  {name: "adidas"},
+  {name: "Nike"},
+  {name: "Reebok"},
+  {name: "HERMES"},
+  {name: "エレコム"},
+])
+
+
 
 
 

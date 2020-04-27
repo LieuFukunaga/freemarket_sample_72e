@@ -7,7 +7,7 @@ class Product < ApplicationRecord
   has_many :comments, dependent: :destroy
   accepts_nested_attributes_for :images, allow_destroy: true
 
-  validates :name, :explanation, :prefecture, :price, :shipping_days, presence: true
+  validates :name, :explanation, :price, :shipping_days, presence: true
   validates :price, numericality: { only_integer: true , greater_than: 0, less_than: 9999999 }
 
   enum prefecture: {

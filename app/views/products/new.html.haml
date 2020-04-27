@@ -8,7 +8,7 @@
       .image-wrapper
         .image-wrapper__label
           出品画像
-          %span.image-wrapper__label__tag 
+          %span.image-wrapper__label__tag
             必須
         .image-wrapper__text
           最大5枚までアップロードできます
@@ -22,7 +22,7 @@
               = form.fields_for :images do |i|
                 - for num in 0..4 do
                   = i.file_field :image, class: "hidden-field", name: "product[images_attributes][#{num}][image]", id: "product_images_attributes_#{num}_image"
-                
+
       .item-wrapper
         .item-wrapper__name
           商品名
@@ -102,7 +102,7 @@
           %a{href: "http://18.180.222.87/"} もどる
         .item-exhibition__text
           %p 禁止されている行為および出品物を必ずご確認ください。偽ブランド品や盗品物などの販売は犯罪であり、法律により処罰される可能性があります。 また、出品をもちまして加盟店規約に同意したことになります。
-      
+
       .item-footer
         %ul.item-footer_list
           %li プライバシーポリシー

@@ -43,7 +43,6 @@ class ProductsController < ApplicationController
     @product = Product.new(set_params)
     if @product.valid? && !@product.images.empty?
       @product.save
-      redirect_to root_path
     else
       redirect_to new_product_path
     end
@@ -222,7 +221,7 @@ class ProductsController < ApplicationController
   end
 
   def set_params
-    params.require(:product).permit(:explanation, :name, :region, :size, :price, :shipping_days, :postage,:bland_id, :condition_id, :category_id, images_attributes: [:image, :_destroy, :id] ).merge(user_id: current_user.id)
+    params.require(:product).permit(:shipping_method, :explanation, :name, :region, :size, :price, :shipping_days, :postage,:bland_id, :condition_id, :category_id, images_attributes: [:image, :_destroy, :id] ).merge(user_id: current_user.id)
   end
 
 end

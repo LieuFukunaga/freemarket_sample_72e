@@ -47,8 +47,8 @@ class ProductsController < ApplicationController
   #商品保存機能
   def create
     @product = Product.new(set_params)
-    ir @product.save!
-      redirect_to root_path
+    if @product.valid? && !@product.images.empty?
+      @product.save
     else
       redirect_to new_product_path
     end

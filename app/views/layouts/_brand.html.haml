@@ -3,7 +3,7 @@
   ブランド
   .brand-container
     .brands.negative
-      - @brands.each do |brand|
+      - @brand_array.each do |brand|
         = link_to "brand/#{brand.id}", id: "brand/#{brand.id}" do
-          %p.brand.negative{id: "#{brand.id}"}
+          %p.brand
             = brand.name

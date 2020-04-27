@@ -18,7 +18,7 @@
   = f.select :postage, [["送料込み(あなたが負担)", true], ["送料別(購入者が負担)", false]]
   %br
   = f.label "発送元の地域"
-  = f.select :region, [["東京都", "東京都"], ["大阪府", "大阪府"], ["それ以外", "それ以外"]]
+  = form.select :prefecture, Product.prefectures_i18n.invert, {}, {class: "item-cost__area__form", id: 'prefecture_selector'}
   %br
   = f.label "発送までの日数"
   = f.text_field :shipping_days, value: 1

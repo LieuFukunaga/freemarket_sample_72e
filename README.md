@@ -45,7 +45,7 @@
 |price|integer|null: false|
 |postage|boolean|null: false, default: false|
 |shipping_days|integer|null: false|
-|region|string|null: false|
+|prefecture|integer|limit: 1, default: 0|
 |condition_id|references|null: false, foreign_key: true|
 |explanation|text|null: false|
 |size|string||

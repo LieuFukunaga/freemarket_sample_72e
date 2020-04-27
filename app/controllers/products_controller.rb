@@ -38,7 +38,7 @@ class ProductsController < ApplicationController
     end
 
     @brands = Bland.all
-    @brand_array = [nil]
+    @brand_array = ["---"]
     @brands.each do |brand|
       @brand_array << [brand.name, brand.id]
     end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200427084739) do
+ActiveRecord::Schema.define(version: 20200427135132) do
 
   create_table "addresses", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id",     null: false
@@ -113,7 +113,6 @@ ActiveRecord::Schema.define(version: 20200427084739) do
   create_table "products", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text     "explanation",     limit: 65535,                 null: false
     t.string   "name",                                          null: false
-    t.string   "region",                                        null: false
     t.string   "size"
     t.integer  "price",                                         null: false
     t.integer  "shipping_days",                                 null: false
@@ -126,6 +125,7 @@ ActiveRecord::Schema.define(version: 20200427084739) do
     t.string   "shipping_method"
     t.boolean  "soldout",                       default: false, null: false
     t.integer  "bland_id"
+    t.integer  "prefecture",      limit: 1,     default: 0
     t.index ["bland_id"], name: "index_products_on_bland_id", using: :btree
     t.index ["category_id"], name: "index_products_on_category_id", using: :btree
     t.index ["condition_id"], name: "index_products_on_condition_id", using: :btree

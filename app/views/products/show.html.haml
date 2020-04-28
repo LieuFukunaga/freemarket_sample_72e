@@ -151,7 +151,7 @@
         .detail-wrapper__main__contents__button-container__safe-link
           = link_to "#" do
             = icon('fas', 'lock')
-            あんしん・あんぜんへの取組み  
+            あんしん・あんぜんへの取組み
   .detail-wrapper__comments
     .detail-wrapper__comments__comment
       - @comments.each do |comment|
@@ -241,5 +241,5 @@
     = link_to "#" do
       フリマ
     = icon('fas','chevron-right')
-    %span 
+    %span
       = @product.name

@@ -4,7 +4,7 @@ class ProductsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show, :search]
   require 'payjp'
   require 'date'
-  
+
   def index
     @used_id = []
     @products = Product.includes(:images).order('created_at DESC')
@@ -145,10 +145,13 @@ class ProductsController < ApplicationController
   def pay
     unless @product.soldout
       @card = Card.where(user_id: current_user.id).first
+      # @Product = Product.find(params[:id])
       @product.soldout = true
       @product.save!
+      # フォームに入力したカード情報をトークン化して支払い処理を行う為の処理
       Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
       @charge = Payjp::Charge.create(
+      # 商品の価格を取得
       amount: @product.price,
       customer: @card.customer_id,
       currency: 'jpy'
@@ -221,7 +224,7 @@ class ProductsController < ApplicationController
 
 
   private
-  
+
   def set_product
     @product = Product.find(params[:id])
   end

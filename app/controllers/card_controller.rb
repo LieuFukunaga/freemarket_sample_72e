@@ -11,7 +11,7 @@ class CardController < ApplicationController
   end
 
   def create
-    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
+    Payjp.api_key = 'pk_test_ade9943c4f26730713dc9dfd'
     if params['payjpToken'].blank?
       redirect_to action: "new"
     else

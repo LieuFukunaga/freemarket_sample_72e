@@ -3,7 +3,7 @@ $(function(){
   $("button").click(function(e){
     e.preventDefault();
     // Payjp.setPublicKey(KEY);
-    Payjp.setPublicKey("sk_test_d45723089aa3e8d410f3a255");
+    Payjp.setPublicKey("pk_test_ade9943c4f26730713dc9dfd");
     var card = {
       cvc      : $("#cvc").val(),
       number   : $("#number").val(),
@@ -19,7 +19,6 @@ $(function(){
         $("#exp_year").removeAttr("name");
         $("#exp_month").removeAttr("name");
         var token = response.id;
-
         $("#charge-form").append($("#payjpToken").val(response.id));
         $("#charge-form").get(0).submit();
       }

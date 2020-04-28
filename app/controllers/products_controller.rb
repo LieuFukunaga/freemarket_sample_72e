@@ -31,8 +31,14 @@ class ProductsController < ApplicationController
       @category_parent_array << [gen1.name, gen1.id]
     end
 
+    # 商品の状態
+    @condition_array = ["---"]
+    Condition.all.each do |condition|
+      @condition_array << [condition.name, condition.id]
+    end
+
     @brands = Bland.all
-    @brand_array = [nil]
+    @brand_array = ["---"]
     @brands.each do |brand|
       @brand_array << [brand.name, brand.id]
     end
@@ -221,7 +227,7 @@ class ProductsController < ApplicationController
   end
 
   def set_params
-    params.require(:product).permit(:explanation, :name, :region, :size, :price, :shipping_days, :postage,:bland_id, :condition_id, :category_id, images_attributes: [:image, :_destroy, :id] ).merge(user_id: current_user.id)
+    params.require(:product).permit(:shipping_method, :explanation, :name, :prefecture, :size, :price, :shipping_days, :postage,:bland_id, :condition_id, :category_id, images_attributes: [:image, :_destroy, :id] ).merge(user_id: current_user.id)
   end
 
 end

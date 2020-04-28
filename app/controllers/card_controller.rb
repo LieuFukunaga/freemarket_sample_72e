@@ -31,7 +31,7 @@ class CardController < ApplicationController
     if card.blank?
       redirect_to action: "create"
     else
-    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
+    Payjp.api_key = 'pk_test_ade9943c4f26730713dc9dfd'
     customer = Payjp::Customer.retrieve(card.customer_id)
     @default_card_information = Payjp::Customer.retrieve(card.customer_id).cards.data[0]
     end

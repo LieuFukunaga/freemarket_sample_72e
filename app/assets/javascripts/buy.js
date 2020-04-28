@@ -3,7 +3,7 @@ $(function(){
   $("button").click(function(e){
     e.preventDefault();
     // Payjp.setPublicKey(KEY);
-    Payjp.setPublicKey("pk_test_ade9943c4f26730713dc9dfd");
+    Payjp.setPublicKey("sk_test_d45723089aa3e8d410f3a255");
     var card = {
       cvc      : $("#cvc").val(),
       number   : $("#number").val(),

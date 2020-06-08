@@ -1,11 +1,6 @@
 // 会員情報入力ページ
 $form-height: 60px;
 
-* {
-    background-repeat: no-repeat;
-    box-sizing: border-box;
-  }
-
 a {
   text-decoration: none;
   color: $black;
@@ -84,7 +79,6 @@ span.form-require {
 body.first-page {
   display: block;
   position: relative;
-  height: 100vh;
   width:100%;
   background-color: $lightgray;
   font-family: 'Source Sans Pro', Helvetica, Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
@@ -189,7 +183,6 @@ body.first-page {
     }
     main.single-main__first-page {
       margin: 0 auto;
-      height: 1500px;
       width: 860px;
       background-color: $white;
       section.l-single-container__first-page {

@@ -81,7 +81,7 @@
         お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
 
 .pickup__sell
-  %h2 
+  %h2
     ピックアップカテゴリー
   .pickup__sell__box
     .pickup__sell__box__head
@@ -96,18 +96,18 @@
               - product.images.each.with_index(1) do |image,i|
                 - if i == 1
                   = image_tag image.image, alt: "QR"
-            %h3 
+            %h3
               = product.name
               - if product.soldout
                 %p SOLDOUT
-            %p1 
+            %p1
               = product.price.to_s(:currency)
               (税込み)
       .pick-list#pick-list
       #pick-pagenation{action: @used_id}
         %p もっと見る
 .pickup__brand
-  %h2 
+  %h2
     ピックアップブランド
   .pickup__brand__box
     .pickup__brand__box__head

@@ -1,14 +1,4 @@
-// 会員情報入力ページ
-$black: #000;
-$chacoal: #333;
-$white: #fff;
-$offwhite: #ccc;
-$gray: #eee;
-$lightgray: #f5f5f5;
-$darkgray: #979797;
-$facebook: #385185;
-$furima: #3CCACE;
-$link--blue: #0099e8;
+// 住所登録ページ
 
 $form-height: 60px;
 
@@ -32,67 +22,27 @@ a.blue {
   color: $link--blue;
 }
 
-.progress-bar {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.inline-text {
-  margin: 30px 0 10px 0;
-}
-
-span {
-  display: inline-block;
-}
-
-span.bold {
-  margin: 0 auto;
+p.proviso--bold {
   font-weight: bold;
   font-size: 18px;
+  margin-top: 50px;
 }
 
-span.form-require {
-  width: 40px;
-  background-color: $furima;
-  color: $white;
-  padding: 4px;
-  margin: 2px;
-  text-align: center;
-}
-
-.form--long {
-  width: 400px;
-  height: $form-height;
-  border: 1px solid $darkgray;
-  border-radius: 4px;
-  line-height: 50px;
-}
-
-.form-field {
-  display: flex;
-}
-
-.form--half {
-  width: 195px;
-  height: $form-height;
-  border: 1px solid $darkgray;
-  border-radius: 4px;
-  line-height: 50px;
-}
-
-.form--half.right-box {
-  margin-left: 10px;
-}
-
-.text {
+p.proviso {
+  font-size: 16px;
   color: $black;
-  font-size: 18px;
-  padding: 5px 8px;
 }
 
+button {
+  width: 400px;
+  height: 60px;
+  margin-top: 20px;
+  background-color: $furima;
+  text-align: center;
+  font-size: 16px;
+}
 
-
-body.first-page {
+body.third-page {
   display: block;
   position: relative;
   height: 100vh;
@@ -189,114 +139,73 @@ body.first-page {
             background-color: $furima;
             color:#fff;
           }
-          // li.active + li::before {
-          //   background-color: $furima;
-          // }
           li.done + li::before {
             background-color: $furima;
           }
         }
       }
     }
-    main.single-main__first-page {
+
+    main.single-main__third-page {
       margin: 0 auto;
-      height: 1500px;
-      width: 860px;
+      height: 830px;
+      width: 800px;
       background-color: $white;
-      section.l-single-container__first-page {
+      section.l-single-container__third-page {
+        height: 100%;
         margin: 0 auto;
-        h2.l-single-head.registration__first-page {
+        h2.l-single-head.registration__third-page {
           text-align: center;
           font-size: 22px;
           padding: 32px;
           border-bottom: 1px solid $gray;
         }
-        .tentative-form {
-          margin-left: 234px;
-          .form-info-text {
-            margin: 30px 0 10px 0;
-            font-size: 17px;
-            color: $black;
-          }
-          .password-check-box {
-            display: flex;
-            margin-top: 15px;
-            .check-box {
-              width: 25px;
-              height: 25px;
-              border: 1px solid $darkgray;
-              border-radius: 2px;
-            }
-            .show-password {
-              font-size: 18px;
-              line-height: normal;
-              padding-left: 10px;
-            }
-          }
-          .comfirmation {
-            font-weight: bold;
-            font-size: 20px;
-            margin-bottom: 15px;
-            margin-top: 40px;
-          }
-          .line {
-            font-size: 16px;
-            padding-bottom: 5px;
-          }
-          .birthday-field {
-            &__form {
-              display: flex;
-              &__three-forms {
+        .confirmation-box {
+          margin:0 auto;
+          .upper-field {
+            margin:0 auto;
+            border-bottom: 1px solid $lightgray;
+            padding-bottom: 20px;
+            &__content {
+              width: 400px;
+              margin:0 auto;
+              .form {
+                width: 400px;
                 height: $form-height;
-                width: 80px;
-                line-height: 80px;
-                border-radius: 4px;
                 border: 1px solid $darkgray;
-                text-align: center;
-                font-size: 18px;
-                &__text {
+                border-radius: 4px;
+                line-height: 50px;
+                .text {
                   color: $black;
+                  font-size: 18px;
+                  padding: 5px 8px;
                 }
               }
-              .unit {
-                padding: 25px 10px;
-                font-size: 18px;
-              }
             }
           }
-          p.form-info-text {
-            width: 420px;
-            line-height: 1.5;
+          .middle-field {
+            margin:0 auto;
+            border-bottom: 1px solid $lightgray;
+            padding-bottom: 20px;
+            &__content {
+              width: 400px;
+              margin:0 auto;
+            }
           }
-          p.form-caution {
-            font-size: 16px;
-            margin-left: 12px;
-          }
-          p.form-caution__line-2 {
-            font-size: 16px;
-            margin-left: 110px;
-          }
-          .btn-default.btn-furima {
-            width: 400px;
-            background-color: $furima;
-            text-align: center;
-          }
-          .form-group.text-right {
-            margin: 30px 0 0 210px;
-            font-size: 16px;
-          }
-          .form-group.recaptcha_term {
-            width: 400px;
-            background-color: $lightgray;
-            line-height: 1.5;
-            padding: 2px 10px;
-            margin-top: 40px;
+          .bottom-field {
+            margin-top: 50px;
+            padding-bottom: 20px;
+            &__content {
+              width: 420px;
+              margin:0 auto;
+            }
           }
         }
       }
     }
 
-    footer.single-footer__first-page {
+
+    footer.single-footer__third-page {
       width: 460px;
       height: 220px;
       margin: 30px auto 0;

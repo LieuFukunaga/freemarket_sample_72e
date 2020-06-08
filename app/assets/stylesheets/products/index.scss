@@ -82,7 +82,7 @@ body {
           border-left: groove 1px;
           cursor: pointer;
           position: relative;
-          background-color: #3CCACE;
+          background-color: $furima;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -183,7 +183,7 @@ body {
         }
       }
     }
-    
+
 }
 
 
@@ -199,7 +199,7 @@ body {
       padding-bottom: 15px;
       position: relative;
       font-family:"Source Sans Pro", Helvetica,;
-    
+
     }
     &--item {
       text-align: center;
@@ -208,7 +208,7 @@ body {
       width: 100%;
       margin: 0 auto;
       span {
-        color: #3CCACE;
+        color: $furima;
       }
       p {
         font-size: 18px;
@@ -247,7 +247,7 @@ body {
       }
     }
   }
-}  
+}
 .top-key {
   padding: 60px 100px;
   background-color: #fff;
@@ -289,7 +289,7 @@ body {
     &__head {
       font-size: 24px;
       text-decoration: none;
-      color: #3CCACE;
+      color: $furima;
       text-align: center;
     }
     .pick-lists {
@@ -358,14 +358,14 @@ body {
     &__head {
       font-size: 24px;
       text-decoration: none;
-      color: #3CCACE;
+      color: $furima;
       text-align: center;
       h3{
         margin-left: 300px;
         a{
           margin-left: 200px;
           font-size: 14px;
-          color: #3CCACE;
+          color: $furima;
           text-decoration: none;
         }
       }
@@ -431,7 +431,7 @@ body {
     }
   }
 }
-  
+
 .footer {
   padding: 60px 0;
   color: #fff;

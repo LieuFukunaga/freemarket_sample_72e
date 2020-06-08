@@ -1,19 +1,7 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-}
-
-body {
-  background-color: #f5f5f5;
-}
-
 .menu {
   height: 100vh;
   &__header{
-    height: 128px;
-    background-color:#f5f5f5;
+    background-color:$lightgray;
     text-align: center;
     img {
       height: 50px;
@@ -86,7 +74,7 @@ body {
             }
           }
           .btn-default {
-            background-color: #3ccace;
+            background-color: $furima;
             color: white;
             font-size: 14px;
             width: 326px;
@@ -110,7 +98,7 @@ body {
       &__line {
         font-size: 10px;
         a {
-          color: black;
+          color: $white;
         }
         &__two {
           display: inline-block;

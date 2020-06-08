@@ -90,7 +90,7 @@ body {
               margin: 10px 0;
               display: block;
               color: white;
-              background-color: #3ccace;
+              background-color: $furima;
             }
           }
         }
@@ -106,7 +106,7 @@ body {
             font-size: 15px;
             color: gray;
           }
-          
+
         }
         &__two{
           padding: 32px 0 0;
@@ -140,7 +140,7 @@ body {
           margin: 32px;
           font-size: 12px;
           a{
-            background-color: #3ccace;
+            background-color: $furima;
             color: white;
             font-size: 14px;
             width: 326px;

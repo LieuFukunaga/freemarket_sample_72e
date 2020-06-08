@@ -1,5 +1,5 @@
 .header__inner__nav {
-  border-bottom: 1px solid #3CCACE;
+  border-bottom: 1px solid $furima;
 }
 * {
   font-family: "Source Sans Pro", Helvetica, Arial, 游ゴシック体, YuGothic, メイリオ, Meiryo, sans-serif;
@@ -30,7 +30,6 @@
         h3 {
           padding-top: 20px;
           padding-bottom: 10px;
-          
         }
         span {
           background-color: red;
@@ -91,15 +90,15 @@
         }
         h4 {
           padding-top: 50px;
-          border-bottom: 1px solid #3CCACE;
+          border-bottom: 1px solid $furima;
         }
         p {
-          color: #3CCACE;
+          color: $furima;
           font-size: 12px;
           margin-left: 150px;
         }
         .button {
-          background-color: #3CCACE;
+          background-color: $furima;
           color: white;
           width: 50%;
           height: 48px;
@@ -128,7 +127,7 @@
             font-weight: bold;
             height: 74px;
             text-align: center;
-            border-bottom:1px solid #3CCACE;
+            border-bottom:1px solid $furima;
             list-style: none;
             margin-block-end:0px;
             li {
@@ -170,7 +169,7 @@
         h3 {
           padding-top: 20px;
           padding-bottom: 20px;
-          border-bottom:1px solid #3CCACE;
+          border-bottom:1px solid $furima;
         }
         .buy-tab {
           padding-inline-start: 0px;
@@ -205,10 +204,9 @@
           padding-bottom: 5px;
           border-bottom: 1px solid #EEE;
         }
-      }  
+      }
     }
   }
 }
 
-  
 

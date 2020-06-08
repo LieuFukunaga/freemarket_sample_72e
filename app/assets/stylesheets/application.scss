@@ -1,26 +1,44 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "card_new";
-@import "card_pay";
-@import "products_index";
-@import "products_new";
-@import "products_show";
-@import "products_buy";
-@import "users_index";
-@import "user_sign_in";
-@import "select";
-@import "registration";
+@import "colors";
+
+// for users
+@import "users/index";
+@import "users/sign_in";
+@import "users/authenticate";
+@import "users/select";
+@import "users/registration";
 @import "telephone";
-@import "authenticate";
 @import "result";
-@import "category";
-@import "category-selector";
+// for products
+@import "products/index";
+@import "products/new";
+@import "products/show";
+@import "products/buy";
+@import "products/new__category";
+// for card
+@import "cards/new";
+@import "cards/pay";
+// for categories
+@import "categories/selector";
+// for brand
 @import "brand";
 
-body{
-  padding-top: 102px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
+
+// 共通：タグ
+body{
+  // padding-top: 102px;
+  background-color: #f5f5f5;
+}
+
+// 共通：クラス
 .breadcrumbs{
   margin: 8px;
   padding: 8px;
@@ -36,7 +54,7 @@ body{
   position: fixed;
   bottom: 30px;
   right:30px;
-  background-color: #3CCACE;
+  background-color: $furima;
   display: inline-block;
   height: 140px;
   width: 140px;

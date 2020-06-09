@@ -1,50 +1,51 @@
 = render "/layouts/header"
 
 -# フォーク後
-%label 登録クレジットカード情報
-%br
-= "**** **** **** " + @default_card_information.last4
-%br
-- exp_month = @default_card_information.exp_month.to_s
-- exp_year = @default_card_information.exp_year.to_s.slice(2,3)
-= exp_month + " / " + exp_year
-= form_tag(delete_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
-  %input{ type: "hidden", name: "card_id", value: "" }
-  %button 削除する
+.cards-show
+  %label 登録クレジットカード情報
+  %br
+  = "**** **** **** " + @default_card_information.last4
+  %br
+  - exp_month = @default_card_information.exp_month.to_s
+  - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+  = exp_month + " / " + exp_year
+  = form_tag(delete_card_index_path, method: :post, id: 'charge-form',  name: "inputForm") do
+    %input{ type: "hidden", name: "card_id", value: "" }
+    %button 削除する
 
--# フォーク前
--# - breadcrumb :card_show
--# = breadcrumbs separator: " &rsaquo; "
+  -# フォーク前
+  -# - breadcrumb :card_show
+  -# = breadcrumbs separator: " &rsaquo; "
 
--# .main-mypage2
--#   .main-mypage2__container.clearfix
--#     .main-mypage2__container__content
--#       .main-mypage2__container__content__icon
--#         %h2 クレジットカード一覧
--#         .main-mypage2__container__content__icon__card
--#           %figure
--#             = image_tag "1.png", size: "120x70", id: "card_image"
--#           .main-mypage2__container__content__icon__card__number
--#             %h3
--#               = "**** **** **** " + @default_card_information.last4
--#           .main-mypage2__container__content__icon__card__number__list
--#             %p
--#             = @default_card_information.exp_month.to_s + " / " + @default_card_information.exp_year.to_s.slice(2,3)
--#           %h4 追加する
--#           = form_tag(card_path(@card), method: :delete, id: 'charge-form',  name: "inputForm") do
--#             %input{ type: "hidden", name: "card_id", value: "" }
--#             %button 削除する
+  -# .main-mypage2
+  -#   .main-mypage2__container.clearfix
+  -#     .main-mypage2__container__content
+  -#       .main-mypage2__container__content__icon
+  -#         %h2 クレジットカード一覧
+  -#         .main-mypage2__container__content__icon__card
+  -#           %figure
+  -#             = image_tag "1.png", size: "120x70", id: "card_image"
+  -#           .main-mypage2__container__content__icon__card__number
+  -#             %h3
+  -#               = "**** **** **** " + @default_card_information.last4
+  -#           .main-mypage2__container__content__icon__card__number__list
+  -#             %p
+  -#             = @default_card_information.exp_month.to_s + " / " + @default_card_information.exp_year.to_s.slice(2,3)
+  -#           %h4 追加する
+  -#           = form_tag(card_path(@card), method: :delete, id: 'charge-form',  name: "inputForm") do
+  -#             %input{ type: "hidden", name: "card_id", value: "" }
+  -#             %button 削除する
 
--#     .main-mypage__container__side
--#       .main-mypage__container__side__nav
--#         - @contents.each do |content|
--#           = link_to content[:link] do
--#             .main-mypage__container__side__nav__list
--#               = content[:content]
--#       %h3
--#         設定
--#       .main-mypage__container__side__nav
--#         - @settings.each do |setting|
--#           = link_to "#" do
--#             .main-mypage__container__side__nav__list
--#               = setting
+  -#     .main-mypage__container__side
+  -#       .main-mypage__container__side__nav
+  -#         - @contents.each do |content|
+  -#           = link_to content[:link] do
+  -#             .main-mypage__container__side__nav__list
+  -#               = content[:content]
+  -#       %h3
+  -#         設定
+  -#       .main-mypage__container__side__nav
+  -#         - @settings.each do |setting|
+  -#           = link_to "#" do
+  -#             .main-mypage__container__side__nav__list
+  -#               = setting
